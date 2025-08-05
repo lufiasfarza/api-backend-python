@@ -69,6 +69,11 @@ logs/
 *.tmp
 *.temp
 
+# Environment files
+.env
+.env.local
+.env.production
+
 # Nix
 shell.nix
 nixpacks.toml 

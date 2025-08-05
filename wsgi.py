@@ -12,4 +12,5 @@ application = app
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     print(f"🚀 Starting Hybrid VPN API on port {port}")
+    print(f"Environment variables: PORT={os.environ.get('PORT', 'NOT SET')}")
     app.run(host='0.0.0.0', port=port) 
