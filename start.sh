@@ -10,8 +10,8 @@ env | grep -E "(PORT|RAILWAY)" || echo "No PORT or RAILWAY variables found"
 # Check if PORT is set
 if [ -z "$PORT" ]; then
     echo "❌ PORT environment variable is not set"
-    echo "Setting default port to 5000"
-    export PORT=5000
+    echo "Setting default port to 8080"
+    export PORT=8080
 else
     echo "✅ PORT is set to: $PORT"
 fi
@@ -27,8 +27,8 @@ ls -la
 # Test if port is valid
 if ! [[ "$PORT" =~ ^[0-9]+$ ]] || [ "$PORT" -lt 1 ] || [ "$PORT" -gt 65535 ]; then
     echo "❌ Invalid port number: $PORT"
-    echo "Setting default port to 5000"
-    export PORT=5000
+    echo "Setting default port to 8080"
+    export PORT=8080
 fi
 
 echo "=== Starting Application ==="
