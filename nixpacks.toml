@@ -1,11 +1,19 @@
 [phases.setup]
-nixPkgs = ["python311", "python311Packages.pip", "python311Packages.gunicorn"]
+nixPkgs = ["python311", "python311Packages.pip", "python311Packages.gunicorn", "python311Packages.setuptools"]
 
 [phases.install]
-cmds = ["pip install -r requirements.txt"]
+cmds = [
+    "pip install --upgrade pip",
+    "pip install -r requirements.txt",
+    "pip install -e ."
+]
 
 [phases.build]
-cmds = ["echo 'Python build completed'"]
+cmds = [
+    "echo 'Python build completed'",
+    "python --version",
+    "pip list"
+]
 
 [start]
 cmd = "gunicorn --bind 0.0.0.0:$PORT wsgi:application" 
