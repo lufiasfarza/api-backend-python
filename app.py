@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Hybrid VPN API Backend
+Hybrid VPN API Backend - PYTHON PROJECT
 API untuk aplikasi SecureVPN dengan server loading dan WireGuard configuration
+FORCE PYTHON DETECTION
 """
 
 from flask import Flask, request, jsonify
